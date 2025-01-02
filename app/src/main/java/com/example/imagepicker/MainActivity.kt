@@ -40,17 +40,17 @@ class MainActivity : AppCompatActivity() {
             pickMedia.launch(PickVisualMediaRequest(ActivityResultContracts.PickVisualMedia.ImageOnly))
         }
 
-       // imageUri = createImageUri()
-        val takePicture = registerForActivityResult(ActivityResultContracts.TakePicture()){
-//            if (imageUri != null) {
+//       // imageUri = createImageUri()
+//        val takePicture = registerForActivityResult(ActivityResultContracts.TakePicture()){
+//            if (imageUri!=null) {
 //                imgV.setImageURI(imageUri)
 //            }
-        }
-
-        btn.setOnClickListener {
-            takePicture.launch(imageUri)
-            true
-        }
+//        }
+//
+//        btn.setOnClickListener {
+//            takePicture.launch(imageUri)
+//            true
+//        }
     }
 
 //    fun createImageUri():Uri{
