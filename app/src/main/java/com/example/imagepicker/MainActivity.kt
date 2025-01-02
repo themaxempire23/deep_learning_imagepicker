@@ -47,7 +47,7 @@ class MainActivity : AppCompatActivity() {
             }
        }
 
-        btn.setOnClickListener {
+        btn.setOnLongClickListener {
             takePicture.launch(imageUri)
             true
         }
