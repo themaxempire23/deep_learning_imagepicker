@@ -56,6 +56,6 @@ class MainActivity : AppCompatActivity() {
     fun createImageUri():Uri {
         val image = File(applicationContext.filesDir, "camera_photo.png")
 
-        return FileProvider.getUriForFile(applicationContext,"com.example.imagepicker.fileprovider",image)
+        return FileProvider.getUriForFile(applicationContext,"com.example.imagepicker1.fileprovider",image)
     }
 }
