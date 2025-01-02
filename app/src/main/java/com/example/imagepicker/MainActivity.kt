@@ -30,7 +30,7 @@ class MainActivity : AppCompatActivity() {
         imgV = findViewById(R.id.imageView)
         btn = findViewById(R.id.button2)
 
-        val pickMedia = registerForActivityResult(ActivityResultContracts.PickVisualMedia()) { uri ->
+        val pickMedia = registerForActivityResult(ActivityResultContracts.PickVisualMedia()) { uri->
             if (uri != null) {
                 imgV.setImageURI(uri)
             }
@@ -40,11 +40,11 @@ class MainActivity : AppCompatActivity() {
             pickMedia.launch(PickVisualMediaRequest(ActivityResultContracts.PickVisualMedia.ImageOnly))
         }
 
-        imageUri = createImageUri()
+       // imageUri = createImageUri()
         val takePicture = registerForActivityResult(ActivityResultContracts.TakePicture()){
-            if (imageUri != null) {
-                imgV.setImageURI(imageUri)
-            }
+//            if (imageUri != null) {
+//                imgV.setImageURI(imageUri)
+//            }
         }
 
         btn.setOnClickListener {
@@ -53,9 +53,9 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    fun createImageUri():Uri{
-        val image = File(applicationContext.filesDir,"camera_photo.png")
-
-        return FileProvider.getUriForFile(applicationContext,"com.example.imagepicker1.fileprovider",image)
-    }
+//    fun createImageUri():Uri{
+//        val image = File(applicationContext.filesDir,"camera_photo.png")
+//
+//        return FileProvider.getUriForFile(applicationContext,"com.example.imagepicker.fileprovider",image)
+//    }
 }
